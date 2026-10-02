@@ -69,7 +69,9 @@ Ghost **16 Windows سخت کرݨ آلے فنکشن** تے **Azure سیکیورٹ
 ### سیکیورٹی جائزہ
 ```powershell
 # Ghost ماڈیول لوڈ کرو
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # موجودہ سیکیورٹی پوزیشن دی جانچ کرو
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### اختیار 1: براہ راست ڈاؤن لوڈ (ٹیسٹنگ)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### اختیار 2: ماڈیول تنصیب
